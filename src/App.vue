@@ -1,47 +1,57 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import TutorialSidebar from './components/TutorialSidebar.vue'
+import { useTheme } from './composables/useTheme'
+
+const { theme, toggle } = useTheme()
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <TutorialSidebar />
+  <div class="main-content">
+    <header class="top-bar">
+      <h1 class="site-title">Guía de Vue.js</h1>
+      <button class="theme-toggle" @click="toggle" :title="theme === 'dark' ? 'Modo claro' : 'Modo oscuro'">
+        {{ theme === 'dark' ? '☀' : '☾' }}
+      </button>
+    </header>
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.site-title {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--text-heading);
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.theme-toggle {
+  font-size: 1.3rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.theme-toggle:hover {
+  border-color: var(--accent);
 }
 </style>
