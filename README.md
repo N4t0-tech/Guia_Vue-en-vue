@@ -1,6 +1,6 @@
-# 🖥️ Guía de Vue.js — Hacker Edition
+# Guía de Vue.js
 
-Tutorial interactivo de Vue 3 con Composition API, estilo terminal hacking.
+Tutorial interactivo de Vue 3 con Composition API, TypeScript y ejemplos en vivo.
 
 ```sh
 npm install
@@ -9,20 +9,26 @@ npm run dev
 
 ## Capítulos
 
-| # | Tema | Demo interactivo |
-|---|---|---|
-| 1 | Introducción | Estructura del proyecto |
-| 2 | Composition API | `ref`, `reactive`, `computed`, `watch` |
-| 3 | Componentes | Props, emits, slots |
-| 4 | Directivas | `v-if`, `v-for`, `v-model`, `v-show` |
-| 5 | Vue Router | Rutas, navegación, parámetros |
-| 6 | Pinia | Estado global con store |
-| 7 | Peticiones HTTP | Fetch, loading, error |
-| 8 | Ciclo de vida | `onMounted`, `onUnmounted` |
-| 9 | Estilos | Scoped, variables CSS, tema |
-| 10 | Composables | Lógica reutilizable |
-| 11 | Formularios | Binding, validación |
-| 12 | Despliegue | Build, Vercel, Netlify |
+| # | Tema |
+|---|---|
+| 1 | Introducción |
+| 2 | Composition API |
+| 3 | Componentes |
+| 4 | Directivas |
+| 5 | Vue Router |
+| 6 | Pinia |
+| 7 | Peticiones HTTP |
+| 8 | Ciclo de vida |
+| 9 | Estilos |
+| 10 | Composables |
+| 11 | Formularios |
+| 12 | Despliegue |
+| 13 | Setup del proyecto |
+| 14 | Variables de entorno |
+| 15 | Provide / Inject |
+| 16 | Transiciones |
+| 17 | App de ejemplo |
+| 18 | App móvil con Capacitor |
 
 ## Stack
 

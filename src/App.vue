@@ -26,10 +26,10 @@ function closeSidebar() {
             <span></span><span></span><span></span>
           </span>
         </button>
-        <h1 class="site-title"><span class="prompt">$</span> Guía de Vue.js</h1>
+        <h1 class="site-title">Guía de Vue.js</h1>
       </div>
       <button class="theme-toggle" @click="toggle">
-        {{ theme === 'dark' ? '[ LIGHT ]' : '[ DARK ]' }}
+        {{ theme === 'dark' ? 'light' : 'dark' }}
       </button>
     </header>
     <main>
@@ -98,12 +98,7 @@ function closeSidebar() {
   margin: 0;
   color: var(--text-heading);
   white-space: nowrap;
-  text-shadow: none;
-}
-
-.prompt {
-  color: var(--accent);
-  margin-right: 0.5rem;
+  font-weight: 600;
 }
 
 .theme-toggle {
@@ -114,12 +109,12 @@ function closeSidebar() {
   color: var(--text-dim);
   cursor: pointer;
   transition: all 0.15s;
-  letter-spacing: 0.5px;
+  text-transform: lowercase;
 }
 
 .theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--text-heading);
+  color: var(--text-heading);
 }
 
 @media (max-width: 768px) {
@@ -129,11 +124,6 @@ function closeSidebar() {
 
   .site-title {
     font-size: 0.9rem;
-  }
-
-  .theme-toggle {
-    font-size: 0.6rem;
-    padding: 0.25rem 0.6rem;
   }
 }
 </style>

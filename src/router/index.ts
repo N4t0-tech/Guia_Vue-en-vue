@@ -64,6 +64,36 @@ const routes = [
     path: '/despliegue',
     name: 'Despliegue',
     component: () => import('../views/12-Despliegue.vue')
+  },
+  {
+    path: '/setup-proyecto',
+    name: 'SetupProyecto',
+    component: () => import('../views/13-SetupProyecto.vue')
+  },
+  {
+    path: '/variables-entorno',
+    name: 'VariablesEntorno',
+    component: () => import('../views/14-VariablesEntorno.vue')
+  },
+  {
+    path: '/provide-inject',
+    name: 'ProvideInject',
+    component: () => import('../views/15-ProvideInject.vue')
+  },
+  {
+    path: '/transiciones',
+    name: 'Transiciones',
+    component: () => import('../views/16-Transiciones.vue')
+  },
+  {
+    path: '/app-ejemplo',
+    name: 'AppEjemplo',
+    component: () => import('../views/17-AppEjemplo.vue')
+  },
+  {
+    path: '/app-movil',
+    name: 'AppMovil',
+    component: () => import('../views/18-AppMovil.vue')
   }
 ]
 

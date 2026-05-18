@@ -12,18 +12,24 @@ const emit = defineEmits<{
 const route = useRoute()
 
 const chapters = [
-  { path: '/introduccion', label: '1. Introducción' },
-  { path: '/composition-api', label: '2. Composition API' },
-  { path: '/componentes', label: '3. Componentes' },
-  { path: '/directivas', label: '4. Directivas' },
-  { path: '/router', label: '5. Vue Router' },
-  { path: '/pinia', label: '6. Pinia' },
-  { path: '/peticiones', label: '7. Peticiones HTTP' },
-  { path: '/ciclo-vida', label: '8. Ciclo de vida' },
-  { path: '/estilos', label: '9. Estilos' },
-  { path: '/composables', label: '10. Composables' },
-  { path: '/formularios', label: '11. Formularios' },
-  { path: '/despliegue', label: '12. Despliegue' }
+  { path: '/introduccion', label: 'Introducción' },
+  { path: '/composition-api', label: 'Composition API' },
+  { path: '/componentes', label: 'Componentes' },
+  { path: '/directivas', label: 'Directivas' },
+  { path: '/router', label: 'Vue Router' },
+  { path: '/pinia', label: 'Pinia' },
+  { path: '/peticiones', label: 'Peticiones HTTP' },
+  { path: '/ciclo-vida', label: 'Ciclo de vida' },
+  { path: '/estilos', label: 'Estilos' },
+  { path: '/composables', label: 'Composables' },
+  { path: '/formularios', label: 'Formularios' },
+  { path: '/despliegue', label: 'Despliegue' },
+  { path: '/setup-proyecto', label: 'Setup del proyecto' },
+  { path: '/variables-entorno', label: 'Variables de entorno' },
+  { path: '/provide-inject', label: 'Provide / Inject' },
+  { path: '/transiciones', label: 'Transiciones' },
+  { path: '/app-ejemplo', label: 'App de ejemplo' },
+  { path: '/app-movil', label: 'App móvil con Capacitor' }
 ]
 
 const activeClass = (path: string) => ({
@@ -38,12 +44,9 @@ function handleNav() {
 <template>
   <aside class="sidebar" :class="{ open }">
     <div class="sidebar-header">
-      <span class="logo">&gt;_ VUE</span>
-      <span class="subtitle">root@guide:~$</span>
+      <span class="logo">vue</span>
+      <span class="subtitle">guía</span>
       <button class="close-btn" @click="emit('close')" title="Cerrar">✕</button>
-    </div>
-    <div class="sidebar-divider">
-      <span class="divider-line" />
     </div>
     <nav class="sidebar-nav">
       <a
@@ -54,13 +57,11 @@ function handleNav() {
         :class="activeClass(chapter.path)"
         @click="handleNav"
       >
-        <span class="nav-prompt">&gt;</span>
         {{ chapter.label }}
       </a>
     </nav>
     <div class="sidebar-footer">
-      <a href="https://vuejs.org" target="_blank" rel="noopener" class="footer-link">$ man vue</a>
-      <span class="footer-version">vue@3</span>
+      <a href="https://vuejs.org" target="_blank" rel="noopener" class="footer-link">vuejs.org</a>
     </div>
   </aside>
 </template>
@@ -99,91 +100,49 @@ function handleNav() {
 }
 
 .close-btn:hover {
-  color: var(--accent);
+  opacity: 0.7;
 }
 
 .logo {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-transform: lowercase;
 }
 
 .subtitle {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: var(--text-dim);
-  margin-top: 2px;
-}
-
-.sidebar-divider {
-  padding: 0 1.5rem 0.8rem;
-}
-
-.divider-line {
-  display: block;
-  height: 1px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--border) 0,
-    var(--border) 4px,
-    transparent 4px,
-    transparent 8px
-  );
 }
 
 .sidebar-nav {
   flex: 1;
-  padding: 0;
+  padding: 0.5rem 0;
 }
 
 .nav-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.5rem;
+  display: block;
+  padding: 0.45rem 1.5rem;
   color: var(--text);
   font-size: 0.8rem;
   text-decoration: none;
   transition: all 0.1s;
   border-left: 2px solid transparent;
-  opacity: 0.7;
-}
-
-.nav-prompt {
-  font-size: 0.7rem;
-  color: var(--text-dim);
-  width: 0.8rem;
-  visibility: hidden;
 }
 
 .nav-item:hover {
-  opacity: 1;
-  background: var(--bg-soft);
-  color: var(--accent);
-}
-
-.nav-item:hover .nav-prompt {
-  visibility: visible;
-  color: var(--accent);
+  color: var(--text-heading);
 }
 
 .nav-item.active {
-  color: var(--accent);
-  border-left-color: var(--accent);
-  background: var(--bg-soft);
-  opacity: 1;
-}
-
-.nav-item.active .nav-prompt {
-  visibility: visible;
-  color: var(--accent);
+  color: var(--text-heading);
+  border-left-color: var(--text-heading);
+  font-weight: 500;
 }
 
 .sidebar-footer {
   padding: 1rem 1.5rem;
   border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
 }
 
 .footer-link {
@@ -192,14 +151,8 @@ function handleNav() {
 }
 
 .footer-link:hover {
-  color: var(--accent);
-  text-shadow: none;
-}
-
-.footer-version {
-  font-size: 0.65rem;
-  color: var(--text-dim);
-  opacity: 0.4;
+  color: var(--text-heading);
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

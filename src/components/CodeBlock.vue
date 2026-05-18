@@ -35,13 +35,13 @@ async function copyCode() {
 <template>
   <div class="code-block">
     <div v-if="title" class="code-header">
-      <span class="code-title">$ {{ title }}</span>
+      <span class="code-title">{{ title }}</span>
       <span class="code-lang">{{ lang }}</span>
     </div>
     <div class="code-body">
       <pre><code ref="codeRef" :class="`language-${lang}`">{{ code }}</code></pre>
       <button class="copy-btn" @click="copyCode">
-        {{ copied ? '[OK]' : '>_' }}
+        {{ copied ? 'copied' : 'copy' }}
       </button>
     </div>
   </div>
@@ -51,10 +51,6 @@ async function copyCode() {
 .code-block {
   margin-bottom: 1.5rem;
   border: 1px solid var(--border);
-  overflow: hidden;
-  box-shadow:
-    inset 0 0 0 1px rgba(0, 255, 65, 0.04),
-    0 0 15px rgba(0, 255, 65, 0.03);
 }
 
 .code-header {
@@ -68,16 +64,14 @@ async function copyCode() {
 }
 
 .code-title {
-  color: var(--accent);
-  font-weight: 400;
-  letter-spacing: 0.3px;
+  color: var(--text-heading);
+  font-weight: 500;
 }
 
 .code-lang {
   color: var(--text-dim);
   text-transform: uppercase;
   font-size: 0.65rem;
-  letter-spacing: 0.5px;
 }
 
 .code-body {
@@ -87,8 +81,6 @@ async function copyCode() {
 .code-body pre {
   margin: 0;
   border: none;
-  border-radius: 0;
-  box-shadow: none;
 }
 
 .copy-btn {
@@ -103,8 +95,7 @@ async function copyCode() {
   opacity: 0;
   transition: opacity 0.15s;
   color: var(--text-dim);
-  text-transform: none;
-  letter-spacing: normal;
+  text-transform: lowercase;
 }
 
 .code-body:hover .copy-btn {
@@ -112,9 +103,7 @@ async function copyCode() {
 }
 
 .copy-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: transparent;
-  box-shadow: none;
+  border-color: var(--text-heading);
+  color: var(--text-heading);
 }
 </style>
