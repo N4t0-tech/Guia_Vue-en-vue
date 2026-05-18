@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import TutorialSidebar from './components/TutorialSidebar.vue'
+import SkeletonPage from './components/SkeletonPage.vue'
 import { useTheme } from './composables/useTheme'
 
 const { theme, toggle } = useTheme()
@@ -33,7 +34,15 @@ function closeSidebar() {
       </button>
     </header>
     <main>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <Transition name="page" mode="out-in">
+          <component :is="Component">
+            <template #fallback>
+              <SkeletonPage />
+            </template>
+          </component>
+        </Transition>
+      </router-view>
     </main>
   </div>
 </template>
@@ -115,6 +124,15 @@ function closeSidebar() {
 .theme-toggle:hover {
   border-color: var(--text-heading);
   color: var(--text-heading);
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.15s ease;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
