@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{A as t,L as n,M as r,R as i,_ as a,d as o,g as s,h as c,p as l,s as u,t as d,v as f,w as p,y as m}from"./index-OKjGQV9p.js";var h={class:`demo`},g={style:{display:`flex`,gap:`0.5rem`,"flex-wrap":`wrap`,"margin-top":`0.5rem`}},_={style:{"margin-top":`0.8rem`,"font-size":`0.85rem`}},v={style:{"margin-left":`0.5rem`}},y={style:{"margin-left":`0.5rem`}},b=`<!-- Componente.vue -->
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{A as t,L as n,M as r,R as i,_ as a,d as o,g as s,h as c,p as l,s as u,t as d,v as f,w as p,y as m}from"./index-DuKBGh4e.js";var h={class:`demo`},g={style:{display:`flex`,gap:`0.5rem`,"flex-wrap":`wrap`,"margin-top":`0.5rem`}},_={style:{"margin-top":`0.8rem`,"font-size":`0.85rem`}},v={style:{"margin-left":`0.5rem`}},y={style:{"margin-left":`0.5rem`}},b=`<!-- Componente.vue -->
 <template>
   <p class="titulo">Este texto es azul solo aquí</p>
 </template>

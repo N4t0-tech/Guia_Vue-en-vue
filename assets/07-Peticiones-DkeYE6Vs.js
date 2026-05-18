@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{E as t,M as n,R as r,_ as i,d as a,g as o,h as s,m as c,p as l,v as u,w as d,y as f}from"./index-OKjGQV9p.js";var p={class:`demo`},m=[`disabled`],h={key:0,style:{"margin-top":`1rem`,color:`#e74c3c`}},g={key:1,style:{"margin-top":`1rem`}},_={style:{"font-size":`1rem`,"margin-bottom":`0.3rem`}},v={style:{"font-size":`0.9rem`,margin:`0`}},y=`import { ref, onMounted } from 'vue'
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{E as t,M as n,R as r,_ as i,d as a,g as o,h as s,m as c,p as l,v as u,w as d,y as f}from"./index-DuKBGh4e.js";var p={class:`demo`},m=[`disabled`],h={key:0,style:{"margin-top":`1rem`,color:`#e74c3c`}},g={key:1,style:{"margin-top":`1rem`}},_={style:{"font-size":`1rem`,"margin-bottom":`0.3rem`}},v={style:{"font-size":`0.9rem`,margin:`0`}},y=`import { ref, onMounted } from 'vue'
 import type { User } from './types'
 
 const users = ref<User[]>([])

@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{d as t,g as n,h as r,p as i,t as a,v as o,w as s,y as c}from"./index-OKjGQV9p.js";var l=`import { createApp } from 'vue'
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{d as t,g as n,h as r,p as i,t as a,v as o,w as s,y as c}from"./index-DuKBGh4e.js";var l=`import { createApp } from 'vue'
 import App from './App.vue'
 
 createApp(App).mount('#app')`,u=`<script setup lang="ts">

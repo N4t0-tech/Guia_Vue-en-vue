@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{M as t,R as n,_ as r,d as i,g as a,h as o,p as s,v as c,w as l,y as u}from"./index-OKjGQV9p.js";var d={class:`demo`},f={style:{display:`flex`,gap:`0.5rem`,"margin-bottom":`1rem`}},p={class:`card`,style:{"margin-bottom":`0`}},m={style:{color:`var(--accent)`}},h=`# .env — variables para todos los entornos
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{M as t,R as n,_ as r,d as i,g as a,h as o,p as s,v as c,w as l,y as u}from"./index-DuKBGh4e.js";var d={class:`demo`},f={style:{display:`flex`,gap:`0.5rem`,"margin-bottom":`1rem`}},p={class:`card`,style:{"margin-bottom":`0`}},m={style:{color:`var(--accent)`}},h=`# .env — variables para todos los entornos
 VITE_APP_TITLE=BeautySkin
 
 # .env.development — se usa con npm run dev

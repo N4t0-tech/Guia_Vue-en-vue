@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{A as t,E as n,M as r,R as i,_ as a,c as o,d as s,h as c,l,p as u,s as d,v as f,w as p,y as m}from"./index-OKjGQV9p.js";var h={class:`demo`},g={key:0,style:{"margin-top":`0.5rem`}},_={key:1,style:{"margin-top":`0.5rem`}},v={class:`demo`},y={style:{display:`flex`,gap:`0.5rem`,"margin-top":`0.5rem`}},b={class:`demo`},x={class:`demo`},S={style:{"margin-top":`0.5rem`}},C=`<p v-if="loggedIn">Bienvenido, usuario</p>
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{A as t,E as n,M as r,R as i,_ as a,c as o,d as s,h as c,l,p as u,s as d,v as f,w as p,y as m}from"./index-DuKBGh4e.js";var h={class:`demo`},g={key:0,style:{"margin-top":`0.5rem`}},_={key:1,style:{"margin-top":`0.5rem`}},v={class:`demo`},y={style:{display:`flex`,gap:`0.5rem`,"margin-top":`0.5rem`}},b={class:`demo`},x={class:`demo`},S={style:{"margin-top":`0.5rem`}},C=`<p v-if="loggedIn">Bienvenido, usuario</p>
 <p v-else>Por favor, iniciá sesión</p>`,w=`<li v-for="(item, index) in items" :key="item.id">
   {{ index + 1 }}. {{ item.name }}
 </li>`,T=`<input v-model="username" placeholder="Tu nombre" />

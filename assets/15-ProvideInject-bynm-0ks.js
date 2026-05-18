@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{F as t,M as n,R as r,T as i,_ as a,b as o,d as s,g as c,h as l,p as u,v as d,w as f,y as p}from"./index-OKjGQV9p.js";var m={class:`demo`},h=`<!-- App.vue pasa datos a → Header → UserAvatar -->
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{F as t,M as n,R as r,T as i,_ as a,b as o,d as s,g as c,h as l,p as u,v as d,w as f,y as p}from"./index-DuKBGh4e.js";var m={class:`demo`},h=`<!-- App.vue pasa datos a → Header → UserAvatar -->
 <!-- App.vue -->
 <Header :user="user" />
 

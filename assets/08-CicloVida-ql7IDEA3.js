@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{C as t,M as n,R as r,S as i,_ as a,d as o,g as s,h as c,m as l,p as u,v as d,w as f,x as p,y as m}from"./index-OKjGQV9p.js";var h={class:`demo`},g={key:0,class:`card`,style:{"margin-top":`1rem`}},_={style:{"font-size":`2rem`,"font-weight":`700`,"text-align":`center`}},v={key:1,style:{"margin-top":`1rem`}},y=`import { onMounted, onUnmounted, onUpdated } from 'vue'
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{C as t,M as n,R as r,S as i,_ as a,d as o,g as s,h as c,m as l,p as u,v as d,w as f,x as p,y as m}from"./index-DuKBGh4e.js";var h={class:`demo`},g={key:0,class:`card`,style:{"margin-top":`1rem`}},_={style:{"font-size":`2rem`,"font-weight":`700`,"text-align":`center`}},v={key:1,style:{"margin-top":`1rem`}},y=`import { onMounted, onUnmounted, onUpdated } from 'vue'
 
 onMounted(() => {
   console.log('Componente montado')

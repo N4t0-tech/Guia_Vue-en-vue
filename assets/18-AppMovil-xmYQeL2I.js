@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{A as t,E as n,L as r,M as i,R as a,_ as o,a as s,d as c,h as l,p as u,v as d,w as f,y as p}from"./index-OKjGQV9p.js";var m={class:`demo`},h={style:{display:`flex`,"flex-direction":`column`,gap:`0.5rem`}},g=[`onUpdate:modelValue`],_=`npm install @capacitor/core @capacitor/cli`,v=`npx cap init com.beautyskin.app "BeautySkin" --webDir dist`,y=`npx cap add android
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{A as t,E as n,L as r,M as i,R as a,_ as o,a as s,d as c,h as l,p as u,v as d,w as f,y as p}from"./index-DuKBGh4e.js";var m={class:`demo`},h={style:{display:`flex`,"flex-direction":`column`,gap:`0.5rem`}},g=[`onUpdate:modelValue`],_=`npm install @capacitor/core @capacitor/cli`,v=`npx cap init com.beautyskin.app "BeautySkin" --webDir dist`,y=`npx cap add android
 # npx cap add ios   # solo en macOS`,b=`npm run build
 npx cap sync`,x=`npx cap open android`,S=`npm install @capacitor/camera
 npm install @capacitor/geolocation

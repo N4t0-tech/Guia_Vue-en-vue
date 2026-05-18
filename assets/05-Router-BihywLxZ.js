@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{_ as t,d as n,g as r,h as i,p as a,v as o,w as s,y as c}from"./index-OKjGQV9p.js";var l=`import { createRouter, createWebHistory } from 'vue-router'
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{_ as t,d as n,g as r,h as i,p as a,v as o,w as s,y as c}from"./index-DuKBGh4e.js";var l=`import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 

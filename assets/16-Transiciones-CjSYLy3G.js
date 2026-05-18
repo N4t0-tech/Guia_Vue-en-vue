@@ -1,4 +1,4 @@
-import{t as e}from"./CodeBlock-DpXj1NaB.js";import{E as t,M as n,R as r,_ as i,d as a,h as o,i as s,k as c,m as l,p as u,r as d,t as f,v as p,w as m,y as h}from"./index-OKjGQV9p.js";var g={class:`demo`},_={style:{display:`flex`,gap:`0.5rem`,"margin-bottom":`1rem`}},v={key:0,class:`card`,style:{"text-align":`center`,"font-size":`1.2rem`,"margin-bottom":`0`}},y={style:{margin:`0`}},b={class:`demo`},x={style:{margin:`0`,"font-size":`1.2rem`}},S={class:`demo`},C={class:`badge`},w=`.fade-enter-active,
+import{t as e}from"./CodeBlock-DSd9V9-T.js";import{E as t,M as n,R as r,_ as i,d as a,h as o,i as s,k as c,m as l,p as u,r as d,t as f,v as p,w as m,y as h}from"./index-DuKBGh4e.js";var g={class:`demo`},_={style:{display:`flex`,gap:`0.5rem`,"margin-bottom":`1rem`}},v={key:0,class:`card`,style:{"text-align":`center`,"font-size":`1.2rem`,"margin-bottom":`0`}},y={style:{margin:`0`}},b={class:`demo`},x={style:{margin:`0`,"font-size":`1.2rem`}},S={class:`demo`},C={class:`badge`},w=`.fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;
 }
