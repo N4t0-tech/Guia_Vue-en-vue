@@ -1,0 +1,18 @@
+import{t as e}from"./CodeBlock-DpXj1NaB.js";import{C as t,M as n,R as r,S as i,_ as a,d as o,g as s,h as c,m as l,p as u,v as d,w as f,x as p,y as m}from"./index-OKjGQV9p.js";var h={class:`demo`},g={key:0,class:`card`,style:{"margin-top":`1rem`}},_={style:{"font-size":`2rem`,"font-weight":`700`,"text-align":`center`}},v={key:1,style:{"margin-top":`1rem`}},y=`import { onMounted, onUnmounted, onUpdated } from 'vue'
+
+onMounted(() => {
+  console.log('Componente montado')
+  // API calls, event listeners, timers
+})
+
+onUnmounted(() => {
+  console.log('Componente desmontado')
+  // Cleanup: remover listeners, cancelar timers
+})
+
+onUpdated(() => {
+  console.log('Componente actualizado')
+  // DOM actualizado
+})`,b=m({__name:`08-CicloVida`,setup(m){let b=n(0),x;p(()=>{x=setInterval(()=>{b.value++},1e3)}),i(()=>{clearInterval(x)});let S=n(!0),C=n([]);return p(()=>{C.value.push(`⏺ onMounted — componente listo`)}),t(()=>{C.value.push(`🔄 onUpdated — DOM actualizado`)}),(t,n)=>(f(),c(o,null,[n[7]||=u(`h1`,null,`Ciclo de vida`,-1),n[8]||=u(`p`,null,[a(` Cada componente Vue pasa por una serie de etapas desde que se crea hasta que se destruye. Los `),u(`strong`,null,`lifecycle hooks`),a(` te permiten ejecutar código en momentos específicos: al montarse, al actualizarse o al desmontarse. `)],-1),u(`section`,null,[n[1]||=s(`<h2>Hooks principales</h2><div class="card"><pre><code>onBeforeMount → onMounted → (cambios) → onUpdated → (desmontaje) → onUnmounted
+        ↑
+  setup()</code></pre></div><ul><li><code>onBeforeMount</code> — justo antes de renderizar el componente</li><li><code>onMounted</code> — el componente ya está en el DOM</li><li><code>onUpdated</code> — el DOM se actualizó por cambios reactivos</li><li><code>onUnmounted</code> — el componente se eliminó del DOM (cleanup)</li></ul>`,3),d(e,{code:y,lang:`typescript`,title:`Lifecycle hooks`})]),u(`section`,null,[n[5]||=u(`h2`,null,`Demo: Timer con ciclo de vida`,-1),n[6]||=u(`p`,null,[a(` Este timer usa `),u(`code`,null,`onMounted`),a(` para iniciar un contador y `),u(`code`,null,`onUnmounted`),a(` para limpiarlo cuando el componente se oculta. Sin el cleanup, el intervalo seguiría ejecutándose en memoria incluso después de que el componente desaparezca. `)],-1),u(`div`,h,[n[4]||=u(`div`,{class:`demo-title`},`Ciclo de vida en acción`,-1),u(`button`,{class:`primary`,onClick:n[0]||=e=>S.value=!S.value},r(S.value?`Ocultar timer`:`Mostrar timer`),1),S.value?(f(),c(`div`,g,[u(`p`,_,r(b.value)+`s `,1),n[2]||=u(`p`,{style:{"text-align":`center`,"font-size":`0.85rem`,opacity:`0.6`}},` Segundos desde que el componente se montó `,-1)])):l(``,!0),S.value?l(``,!0):(f(),c(`div`,v,[...n[3]||=[u(`p`,null,`⏹ Timer detenido y cleanup ejecutado (intervalo cancelado)`,-1)]]))])]),n[9]||=s(`<section><h2>Resumen de uso común</h2><table class="card" style="width:100%;border-collapse:collapse;"><thead><tr style="border-bottom:1px solid var(--border);"><th style="padding:0.5rem;text-align:left;">Hook</th><th style="padding:0.5rem;text-align:left;">Cuándo usarlo</th></tr></thead><tbody><tr style="border-bottom:1px solid var(--border);"><td style="padding:0.5rem;"><code>onMounted</code></td><td style="padding:0.5rem;">Fetch de datos, event listeners, timers, integración con librerías externas</td></tr><tr><td style="padding:0.5rem;"><code>onUnmounted</code></td><td style="padding:0.5rem;">Limpiar timers, remover event listeners, cancelar subscriptions</td></tr></tbody></table></section>`,1)],64))}});export{b as default};

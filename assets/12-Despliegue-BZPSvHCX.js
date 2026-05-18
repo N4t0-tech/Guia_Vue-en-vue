@@ -1,0 +1,16 @@
+import{t as e}from"./CodeBlock-DpXj1NaB.js";import{_ as t,d as n,g as r,h as i,p as a,v as o,w as s,y as c}from"./index-OKjGQV9p.js";var l={class:`card`},u=`npm run build`,d=`server {
+  listen 80;
+  server_name tudominio.com;
+  root /var/www/beautyskin-front/dist;
+
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+}`,f=c({__name:`12-Despliegue`,setup(c){return(c,f)=>(s(),i(n,null,[f[8]||=a(`h1`,null,`Despliegue`,-1),f[9]||=a(`p`,null,` Una vez que tenés tu app lista, el paso final es publicarla para que otros puedan usarla. Vue compila todo a archivos estáticos (HTML, CSS, JS) que podés servir desde cualquier servidor web o plataforma de hosting. `,-1),a(`section`,null,[f[0]||=a(`h2`,null,`Build de producción`,-1),f[1]||=a(`p`,null,[t(`El comando `),a(`code`,null,`npm run build`),t(` ejecuta TypeScript checking y luego Vite genera los archivos en la carpeta `),a(`code`,null,`dist/`),t(`:`)],-1),o(e,{code:u,lang:`bash`,title:`Build`}),f[2]||=a(`p`,null,`El resultado es algo como:`,-1),f[3]||=a(`div`,{class:`card`},[a(`pre`,null,[a(`code`,null,`dist/
+├── index.html
+├── assets/
+│   ├── index-Bz7kBkkD.js      (JS compilado y minificado)
+│   ├── index-DjwR06Zz.css     (CSS compilado y minificado)
+│   └── vendor-*.js            (dependencias)
+├── favicon.ico
+└── ...`)])],-1)]),a(`section`,null,[f[6]||=r(`<h2>Opciones de despliegue</h2><div class="card"><h3>Vercel (recomendado)</h3><p>La opción más simple. Conectá tu repo de Git y Vercel detecta Vite automáticamente.</p><ol><li>Subí el proyecto a GitHub</li><li>Andá a <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></li><li>Importá el repositorio</li><li>Listo — se despliega solo en cada push</li></ol></div><div class="card"><h3>Netlify</h3><p>Similar a Vercel. También detecta Vite automáticamente.</p><ol><li>Subí el proyecto a GitHub</li><li>Andá a <a href="https://netlify.com" target="_blank" rel="noopener">netlify.com</a></li><li>Importá el repo y configurá: comando <code>npm run build</code>, carpeta <code>dist</code></li></ol></div>`,3),a(`div`,l,[f[4]||=a(`h3`,null,`Servidor propio (NGINX, Apache, etc.)`,-1),f[5]||=a(`p`,null,[t(`Subí la carpeta `),a(`code`,null,`dist/`),t(` a tu servidor. Importante: configurá el servidor para que todas las rutas caigan en `),a(`code`,null,`index.html`),t(` (para que funcione Vue Router en modo history).`)],-1),o(e,{code:d,lang:`nginx`,title:`Configuración NGINX`})]),f[7]||=a(`div`,{class:`card`},[a(`h3`,null,`GitHub Pages`),a(`p`,null,`Gratuito y simple para proyectos chicos. Necesitás configurar Vite para rutas relativas:`),a(`p`,null,[t(`En `),a(`code`,null,`vite.config.ts`),t(`, agregá `),a(`code`,null,`base: '/nombre-del-repo/'`),t(`. Luego subí la carpeta `),a(`code`,null,`dist`),t(` a la branch `),a(`code`,null,`gh-pages`),t(`.`)])],-1)]),f[10]||=r(`<section><h2>Antes de desplegar</h2><ul><li>✅ Probá que <code>npm run build</code> no tenga errores</li><li>✅ Verificá que las variables de entorno estén configuradas (VITE_API_URL, etc.)</li><li>✅ Probá el build localmente con <code>npm run preview</code> (servidor local de la versión compilada)</li><li>✅ Configurá el manejo de rutas 404 para que redirijan a <code>index.html</code></li><li>✅ Optimizá imágenes y recursos grandes</li></ul></section>`,1)],64))}});export{f as default};
