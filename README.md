@@ -1,41 +1,44 @@
+# 🖥️ Guía de Vue.js — Hacker Edition
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Tutorial interactivo de Vue 3 con Composition API, estilo terminal hacking.
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Capítulos
 
-```sh
-npm run build
-```
+| # | Tema | Demo interactivo |
+|---|---|---|
+| 1 | Introducción | Estructura del proyecto |
+| 2 | Composition API | `ref`, `reactive`, `computed`, `watch` |
+| 3 | Componentes | Props, emits, slots |
+| 4 | Directivas | `v-if`, `v-for`, `v-model`, `v-show` |
+| 5 | Vue Router | Rutas, navegación, parámetros |
+| 6 | Pinia | Estado global con store |
+| 7 | Peticiones HTTP | Fetch, loading, error |
+| 8 | Ciclo de vida | `onMounted`, `onUnmounted` |
+| 9 | Estilos | Scoped, variables CSS, tema |
+| 10 | Composables | Lógica reutilizable |
+| 11 | Formularios | Binding, validación |
+| 12 | Despliegue | Build, Vercel, Netlify |
+
+## Stack
+
+- **Vue 3** + **Composition API**
+- **TypeScript**
+- **Vue Router** — navegación
+- **Pinia** — estado global
+- **VueUse** — utilidades reactivas
+- **Vite** — build / dev server
+- **highlight.js** — resaltado de código
+
+## Comandos
+
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Servidor de desarrollo con hot-reload |
+| `npm run build` | Type-check + build producción |
+| `npm run build-only` | Solo build (sin type-check) |
+| `npm run preview` | Previsualizar build local |
