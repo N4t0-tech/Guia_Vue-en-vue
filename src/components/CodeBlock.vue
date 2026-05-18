@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted } from 'vue'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/github-dark.css'
+import 'highlight.js/styles/atom-one-dark-reasonable.css'
 
 const props = withDefaults(defineProps<{
   code: string
@@ -35,13 +35,13 @@ async function copyCode() {
 <template>
   <div class="code-block">
     <div v-if="title" class="code-header">
-      <span class="code-title">{{ title }}</span>
+      <span class="code-title">$ {{ title }}</span>
       <span class="code-lang">{{ lang }}</span>
     </div>
     <div class="code-body">
       <pre><code ref="codeRef" :class="`language-${lang}`">{{ code }}</code></pre>
-      <button class="copy-btn" @click="copyCode" :title="copied ? 'Copiado' : 'Copiar código'">
-        {{ copied ? '✓' : '📋' }}
+      <button class="copy-btn" @click="copyCode">
+        {{ copied ? '[OK]' : '>_' }}
       </button>
     </div>
   </div>
@@ -51,30 +51,33 @@ async function copyCode() {
 .code-block {
   margin-bottom: 1.5rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
   overflow: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 255, 65, 0.04),
+    0 0 15px rgba(0, 255, 65, 0.03);
 }
 
 .code-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   background: var(--code-bg);
   border-bottom: 1px solid var(--border);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
 }
 
 .code-title {
-  color: var(--text-heading);
-  font-weight: 600;
+  color: var(--accent);
+  font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 .code-lang {
-  color: var(--text);
-  opacity: 0.5;
+  color: var(--text-dim);
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
 }
 
 .code-body {
@@ -85,21 +88,23 @@ async function copyCode() {
   margin: 0;
   border: none;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .copy-btn {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  background: var(--card-bg);
+  background: transparent;
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.3rem 0.6rem;
-  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.2s;
-  color: var(--text);
+  transition: opacity 0.15s;
+  color: var(--text-dim);
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .code-body:hover .copy-btn {
@@ -108,5 +113,8 @@ async function copyCode() {
 
 .copy-btn:hover {
   border-color: var(--accent);
+  color: var(--accent);
+  background: transparent;
+  box-shadow: none;
 }
 </style>

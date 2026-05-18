@@ -15,12 +15,13 @@ const codeScoped = `<!-- Componente.vue -->
 
 const codeGlobal = `/* main.css */
 body {
-  font-family: 'Inter', sans-serif;
-  background: #f5f5f5;
+  font-family: 'JetBrains Mono', monospace;
+  background: #0a0a0a;
+  color: #ff8800;
 }`
 
 const codeVars = `:root {
-  --color-primary: #42b883;
+  --color-primary: #ff8800;
   --spacing: 1rem;
 }
 
@@ -29,8 +30,8 @@ const codeVars = `:root {
   border: 1px solid var(--color-primary);
 }`
 
-const textColor = ref('#42b883')
-const bgColor = ref('#222222')
+const textColor = ref('#ff8800')
+const bgColor = ref('#0a0a0a')
 const borderRadius = ref('10')
 
 function randomColor(): string {
@@ -95,7 +96,7 @@ function randomizeColors() {
 
       <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem">
         <button class="primary" @click="randomizeColors">Colores aleatorios</button>
-        <button class="secondary" @click="textColor = '#42b883'; bgColor = '#222222'">Reset</button>
+        <button class="secondary" @click="textColor = '#ff8800'; bgColor = '#0a0a0a'">Reset</button>
       </div>
 
       <div style="margin-top:0.8rem;font-size:0.85rem">

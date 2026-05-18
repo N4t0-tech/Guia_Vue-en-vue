@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { computed } from 'vue'
+
+defineProps<{
+  open: boolean
+}>()
+
+const emit = defineEmits<{
+  close: []
+}>()
 
 const route = useRoute()
 
@@ -22,13 +29,21 @@ const chapters = [
 const activeClass = (path: string) => ({
   active: route.path === path
 })
+
+function handleNav() {
+  emit('close')
+}
 </script>
 
 <template>
-  <aside class="sidebar">
+  <aside class="sidebar" :class="{ open }">
     <div class="sidebar-header">
-      <span class="logo">Vue</span>
-      <span class="subtitle">Tutorial</span>
+      <span class="logo">&gt;_ VUE</span>
+      <span class="subtitle">root@guide:~$</span>
+      <button class="close-btn" @click="emit('close')" title="Cerrar">✕</button>
+    </div>
+    <div class="sidebar-divider">
+      <span class="divider-line" />
     </div>
     <nav class="sidebar-nav">
       <a
@@ -37,13 +52,15 @@ const activeClass = (path: string) => ({
         :href="chapter.path"
         class="nav-item"
         :class="activeClass(chapter.path)"
+        @click="handleNav"
       >
+        <span class="nav-prompt">&gt;</span>
         {{ chapter.label }}
       </a>
     </nav>
     <div class="sidebar-footer">
-      <a href="https://vuejs.org" target="_blank" rel="noopener" class="footer-link">Documentación oficial</a>
-      <span class="footer-version">Vue 3</span>
+      <a href="https://vuejs.org" target="_blank" rel="noopener" class="footer-link">$ man vue</a>
+      <span class="footer-version">vue@3</span>
     </div>
   </aside>
 </template>
@@ -64,43 +81,88 @@ const activeClass = (path: string) => ({
 }
 
 .sidebar-header {
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 1.5rem 0.8rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
+.close-btn {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+
+.close-btn:hover {
   color: var(--accent);
-  letter-spacing: -1px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .subtitle {
-  font-size: 0.85rem;
-  color: var(--text);
-  opacity: 0.7;
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.sidebar-divider {
+  padding: 0 1.5rem 0.8rem;
+}
+
+.divider-line {
+  display: block;
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--border) 0,
+    var(--border) 4px,
+    transparent 4px,
+    transparent 8px
+  );
 }
 
 .sidebar-nav {
   flex: 1;
-  padding: 0.8rem 0;
+  padding: 0;
 }
 
 .nav-item {
-  display: block;
-  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.5rem;
   color: var(--text);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-decoration: none;
-  transition: all 0.15s;
-  border-left: 3px solid transparent;
+  transition: all 0.1s;
+  border-left: 2px solid transparent;
+  opacity: 0.7;
+}
+
+.nav-prompt {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  width: 0.8rem;
+  visibility: hidden;
 }
 
 .nav-item:hover {
+  opacity: 1;
   background: var(--bg-soft);
+  color: var(--accent);
+}
+
+.nav-item:hover .nav-prompt {
+  visibility: visible;
   color: var(--accent);
 }
 
@@ -108,7 +170,12 @@ const activeClass = (path: string) => ({
   color: var(--accent);
   border-left-color: var(--accent);
   background: var(--bg-soft);
-  font-weight: 600;
+  opacity: 1;
+}
+
+.nav-item.active .nav-prompt {
+  visibility: visible;
+  color: var(--accent);
 }
 
 .sidebar-footer {
@@ -116,29 +183,37 @@ const activeClass = (path: string) => ({
   border-top: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.2rem;
 }
 
 .footer-link {
-  font-size: 0.8rem;
-  color: var(--text);
-  opacity: 0.6;
+  font-size: 0.75rem;
+  color: var(--text-dim);
 }
 
 .footer-link:hover {
-  opacity: 1;
   color: var(--accent);
+  text-shadow: none;
 }
 
 .footer-version {
-  font-size: 0.75rem;
-  color: var(--text);
+  font-size: 0.65rem;
+  color: var(--text-dim);
   opacity: 0.4;
 }
 
 @media (max-width: 768px) {
   .sidebar {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .close-btn {
+    display: block;
   }
 }
 </style>
